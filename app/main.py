@@ -4,7 +4,7 @@ app = FastAPI()
 
 @app.get("/")
 def get_root():
-    return {"message":"hello world","method":"GET"}
+    return {"message_get":"Welcome to Todo-App"}
 
 
 @app.post("post")
