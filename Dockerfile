@@ -1,14 +1,12 @@
 FROM python:3.9
 
-#RUN pip install fastapi
-#RUN pip install "uvicorn[standard]"
+WORKDIR /server
 
-WORKDIR /code
-COPY ./requirements.txt /code/requirements.txt
-RUN pip install -r requirements.txt
+COPY ./requirements.txt .
 
-COPY ./app /code/app
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
+COPY ./app /server/app
 
 EXPOSE 8080
 

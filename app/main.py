@@ -1,12 +1,10 @@
 from fastapi import FastAPI
+from app.backend.routers import router
 
 app = FastAPI()
 
-@app.get("/")
-def get_root():
-    return {"message_get":"Welcome to Todo-App"}
+#Include router
+app.include_router(router)
 
 
-@app.post("post")
-def post_root():
-        return {"message":"hello world","method":"POST"}
+
