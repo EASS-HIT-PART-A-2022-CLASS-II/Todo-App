@@ -1,9 +1,7 @@
 from pydantic import BaseModel
 from datetime import date
 
-
 class Task(BaseModel):
-    task_id: int
     description: str
     creation_date: str = date.today().strftime("%d/%m/%Y")
     check = 0
@@ -16,9 +14,23 @@ def MessageResponse(data, message):
         "message": message,
     }
 
+
 def MessageError(data,message):
     return {
         "data":data,
         "code": 404,
         "message":message,
     }
+
+
+def taskEntity(task)-> dict:
+    return {
+        "id": str(task["_id"]),
+        "description": task["description"],
+        "creation_date": task["creation_date"],
+        "check": task["check"]
+    }
+
+
+def tasksEntity(entity)-> list:
+    return [taskEntity(task) for task in entity]
