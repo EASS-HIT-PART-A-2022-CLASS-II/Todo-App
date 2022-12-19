@@ -3,7 +3,7 @@
    Todo App
   <img src="https://cdn.icon-icons.com/icons2/3078/PNG/512/clipboard_notes_list_tasks_icon_191193.png" width="45"/>
 </h1>
-<b>Organize your life with todo app</b>
+<b>Organize your tasks with todo app</b>
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/VdoIFLsMIlwzfKD520/giphy.gif" width="200"/>
 </div>
