@@ -52,3 +52,9 @@ async def delete_task(id, task: Task):
         return MessageResponse("Task ID: {} deleted successfully.".format(id),"Task Deleted.")
     return MessageError("Unable to delete task ID: {}".format(id),"Task not found or not exists.")
 
+
+#test
+@router.post("/v1/test_app", tags=["Manage Tests"])
+async def create_new_task(task :Task):
+    return task
+

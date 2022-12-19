@@ -1,9 +1,9 @@
 from pydantic import BaseModel
-from datetime import date
+import datetime
 
 class Task(BaseModel):
     description: str
-    creation_date: str = date.today().strftime("%d/%m/%Y")
+    creation_date: str = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     check = 0
 
 
