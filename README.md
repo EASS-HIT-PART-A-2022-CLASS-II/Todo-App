@@ -32,7 +32,10 @@
 - [x] Modify existing task
 - [x] Get task by task id
 - [x] Delete task
-    
+
+### Architecture (High Level):
+   ![image](https://user-images.githubusercontent.com/89268094/208757922-1655d423-55f0-416f-aeab-af641865f981.png)
+
     
 ### Languages and Tools :hammer_and_wrench::
 <div>
