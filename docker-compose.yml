@@ -19,7 +19,7 @@ services:
     restart: on-failure
     container_name: mongodb
     volumes:
-      - "./var/lib/todo_app_mongodb:/data/db"
+      - "/usr/todo_app_mongodb:/data/db"
     networks:
       - app-network
   
