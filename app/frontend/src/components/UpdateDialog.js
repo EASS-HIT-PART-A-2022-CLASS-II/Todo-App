@@ -25,7 +25,7 @@ const UpdateDialog = (params) => {
       id: id,
       tag: tag,
       description: description,
-      checked: Checked,
+      check: Checked,
     };
     console.log(obj);
     axios
@@ -67,7 +67,9 @@ const UpdateDialog = (params) => {
             <div>
               <Calendar
                 disabled
-                value={new Date(params.creation_date)}
+                dateFormat="mm/dd/yy"
+                value={new Date(params.date)}
+                showIcon={(true)}
               ></Calendar>
             </div>
           </span>
@@ -87,7 +89,10 @@ const UpdateDialog = (params) => {
           <div>
             <Checkbox
               checked={Checked}
-              onChange={(e) => {setCheckd(e.target.checked);}}
+              value = {params.Checked}
+              onChange={(e) => {
+                setCheckd(e.target.checked);
+              }}
             ></Checkbox>
           </div>
         </div>

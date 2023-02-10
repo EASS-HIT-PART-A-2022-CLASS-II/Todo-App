@@ -5,7 +5,7 @@ class Task(BaseModel):
     tag: str
     description: str
     creation_date: str = datetime.datetime.now().strftime("%d/%m/%Y")
-    check: bool = 0
+    check: bool = False
 
 
 def MessageResponse(data, message):

@@ -20,6 +20,7 @@ const TodoList = () => {
   const [taskDescription, setTaskDescription] = useState("");
   const [updateDialog, setUpdateDialog] = useState(false);
   const [currentId, setCurrentId] = useState(0);
+  const [editDate, setEditDate] = useState(0);
 
   const showSuccessMessage = () => {
     Toast.current.show({
@@ -217,7 +218,13 @@ const TodoList = () => {
                 <span className={["p-float-label", style.inputs]}>
                   <label htmlFor="tag">Tag</label>
                   <div>
-                    <InputText className={style.gridTitles} disabled id="Tag" value={obj.tag} m />
+                    <InputText
+                      className={style.gridTitles}
+                      disabled
+                      id="Tag"
+                      value={obj.tag}
+                      m
+                    />
                   </div>
                 </span>
                 <span className={["p-float-label", style.inputs]}>
@@ -225,6 +232,7 @@ const TodoList = () => {
                   <div>
                     <Calendar
                       className={style.gridTitles}
+                      dateFormat="mm/dd/yy"
                       disabled
                       value={new Date(obj.creation_date)}
                     ></Calendar>
@@ -260,6 +268,7 @@ const TodoList = () => {
                         setTaskTag(obj.tag);
                         setTaskDescription(obj.description);
                         setCurrentId(obj.id);
+                        setEditDate(obj.creation_date);
                         handleUpdateDialog();
                       }}
                     >
@@ -286,6 +295,7 @@ const TodoList = () => {
             tag={taskTag}
             description={taskDescription}
             checked={taskCheck}
+            date={editDate}
           ></UpdateDialog>
         ) : (
           <></>
