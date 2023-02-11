@@ -42,7 +42,14 @@
    <img src="https://upload.wikimedia.org/wikiversity/en/8/8c/FastAPI_logo.png" title="FastAPI" width="80" height="40"/>&nbsp;
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" title="React" width="40" height="40"/>&nbsp;
 </div>
-   
+ 
+ <div><div/>
+ 
+ ### Demo :clapper::
+https://user-images.githubusercontent.com/89268094/218276615-d258e9ba-65fc-4941-adac-bcd0858b24c3.mp4
+
+
+
  
  ### Installation Instructions:
  1.
